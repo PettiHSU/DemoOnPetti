@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>learning javascript</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<button>提交</button>
+	<p id="result"></p>
+	<script type="text/javascript">
+		$.ajax({
+			url: "test.html"
+		}).done(function(data){
+			// alert(data)
+		});
+		$(document).ready(function() {
+			$("button").click(function(){
+				$.get("test.html", function(data, status){
+					// alert(status);
+					$("#result").html(data);
+				});
+			});
+		});
+		// $.get("test.html", function(data){
+		// 	alert(data);
+		// });
+	</script>
+</body>
+</html>

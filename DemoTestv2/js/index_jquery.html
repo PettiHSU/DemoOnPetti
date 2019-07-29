@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>learning javascript</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<style type="text/css">
+		#circle{
+			width: 200px;
+			height: 200px;
+			background-color: #a7568b;
+			border-radius: 50%;
+		}
+		.square{
+			width: 200px;
+			height: 200px;
+			background-color: #a7545b;
+			margin-top: 10px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="circle"></div>
+	<button id="b1">消失</button>
+	<button id="b2">顯示</button>
+	<!-- <iframe width="800" height="800" src="https://www.harper.com.tw"></iframe> -->
+	<!-- <div class="square"></div>
+	<div class="square"></div> -->
+	<script type="text/javascript">
+		$("#circle").click(function(){
+			$(this).animate({
+				width:"400px",
+				height:"500px",
+				marginLeft:"100px",
+		}, 1500)
+
+		});
+		$("#b1").click(function(){
+			$("#circle").fadeOut(3000, function(){
+				alert("消失動畫完成");
+			});
+		});
+		$("#b2").click(function(){
+			$("#circle").fadeIn();
+		});
+	</script>
+</body>
+</html>
